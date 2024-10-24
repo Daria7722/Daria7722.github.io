@@ -31,6 +31,13 @@ body{
   width: 100%;
 }
 
+.page-header__container__logo{
+  flex-shrink: 0;
+  width: 202px;
+  height: 147px;
+  font-size: 0;
+  text-decoratiom: none;
+  
   
 .main{
   flex: 1 0 auto;
