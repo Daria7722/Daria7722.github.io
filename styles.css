@@ -61,20 +61,17 @@ body {
 }
 
 .page-header__nav-link {
-    margin: 0 25px;
-    color: #1f1e1e;
-    font-weight: 600;
+    text-decoration: none;
     font-size: 18px;
     line-height: 25px;
-    text-decoration: none;
+    color: #1f1e1e;
     transition: color 0.2s;
 }
 
-    .page-header__nav-link: hover,
-    .page-header__nav-link: active {
-        color: #BC3324;
-    }
-
+.page-header__nav-link:hover,
+.page-header__nav-link:active {
+    color: #BC3324;
+}
 .page-header__btn {
     width: 51px;
     height: 22px;
