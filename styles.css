@@ -192,6 +192,31 @@ body {
     flex-wrap: wrap;
     gap: 60px;
 }
+.reserve {
+    display: grid;
+    grid-template-columns: 405px 1fr;
+    grid-template-areas:
+        "checkbox scheme"
+        "order legend";
+    gap: 65px 11%;
+    width: 100%
+}
+.reserve__checkbox {
+    grid-area: "checkbox";
+    background-color: #ff0000;
+}
+.reserve__scheme {
+    grid-area: "scheme";
+    background-color: #ffd800;
+}
+.reserve__order {
+    grid-area: "order";
+    background-color: #b6ff00;
+}
+.reserve__legend {
+    grid-area: "legend";
+    background-color: #00ffff;
+}
 .main {
     flex: 1 0 auto;
 }
