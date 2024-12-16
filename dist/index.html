@@ -1,32 +1,50 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/blocks
-/styles.css" />
-</head>
-<body class="body">
-    <header class="page-header">
-        <div class="page-header__container">
-            <a href="#" class="page-header__logo">
-              <svg class="page-header__logo-icon" width="202" height="147">
-                <use xlink:href="assets/icons/symbols.svg#logo"></use>
-              </svg>
-            </a>
-            <nav class="page-header__nav">
-                <a href="#" class="page-header__nav-link">Мероприятия</a>
-                <a href="#" class="page-header__nav-link">Блог</a>
-                <a href="#" class="page-header__nav-link">О нас</a>
-                <a href="#" class="page-header__nav-link">Контакты</a>
-            </nav>
-            <div class="page-header__right-block">
-                <a href="#" class="page-header__btn btn">Войти</a>
-            </div>
-        </div>
-    </header>
-    <main class="main"></main>
-    <footer class="page-footer">footer</footer>
-</body>
+<!DOCTYPE html>  
+<html lang="ru">  
+@@include('blocks/head.html')
+  <body class="body">
+    @@include('blocks/page-header.html')
+    <main class="main">
+      <!-- <h2 class="section-title">О нас</h2>
+      @@include('blocks/about.html') -->
+      <div class ="events">
+        <section class="listing @@class">
+          <h2 class="listing__title section-title">Блог</h2>
+          <div class="listing__article-list">
+            @@loop('blocks/article-card.html', [
+              {
+                "class": "listing__article-card",
+                "img": "assets/images/blog/theatre.jpg",
+                "alt": "Theatre Photosession",
+                "title": "Фотосессия в стенах Театра драмы",
+                "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
+                "time": "26.11.2022",
+                "datetime": "2022-11-26"
+              },
+              {
+                "class": "listing__article-card",
+                "img": "assets/images/blog/VR.jpg",
+                "alt": "VR",
+                "title": "Выставка VR в Томске",
+                "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
+                "time": "05.11.2022",
+                "datetime": "2022-11-05"
+              },
+              {
+                "class": "listing__article-card",
+                "img": "assets/images/blog/rocking radio.jpg",
+                "alt": "rocking radio",
+                "title": "Rocking radio в заброшенном ангаре",
+                "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
+                "time": "01.11.2022",
+                "datetime": "2022-11-01"
+              }
+            ])
+          </div>
+          <a href="#" class="listing__link link">Смотреть все</a>
+        </section>
+    </div>
+    </main>
+    @@include('blocks/page-footer.html')
+    @@include('blocks/event-pp.html')
+  </body>
 </html>
